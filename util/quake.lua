@@ -136,13 +136,14 @@ function quake:toggle()
      end
 end
 
+
 function quake.new(conf)
     conf = conf or {}
 
-    conf.app        = conf.app       or "USE_TMUX=true alacritty"    -- application to spawn
+    conf.app        = conf.app       or "alacritty"    -- application to spawn
     conf.name       = conf.name      or "QuakeDD"      -- window name
     conf.argname    = conf.argname   or "--class %s"   -- how to specify window name
-    conf.extra      = conf.extra     or ""         -- extra arguments
+    conf.extra      = conf.extra     or "-e tmux new-session 'aichat -s'"         -- extra arguments
     conf.border     = conf.border    or 1          -- client border width
     conf.visible    = conf.visible   or false      -- initially not visible
     conf.followtag  = conf.followtag or false      -- spawn on currently focused screen
