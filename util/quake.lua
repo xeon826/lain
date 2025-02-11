@@ -140,7 +140,7 @@ end
 function quake.new(conf)
     conf = conf or {}
 
-    conf.app        = conf.app       or "alacritty"    -- application to spawn
+    conf.app        = conf.app       or "kitty"    -- application to spawn
     conf.name       = conf.name      or "QuakeDD"      -- window name
     conf.argname    = conf.argname   or "--class %s"   -- how to specify window name
     conf.extra      = conf.extra     or "-e bash -ic 'tmux new-session \"aichat -s\"'"         -- extra arguments
